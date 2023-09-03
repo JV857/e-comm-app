@@ -1,16 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import About from "./About";
-import Home from "./Home.jsx";
-import Products from "./Products";
-import Contact from "./Contact";
-import Cart from "./Cart";
-import SingleProduct from "./SingleProduct";
-import ErrorPage from "./ErrorPage";
+import About from "./pages/About";
+import Home from "./pages/Home";
+import Products from "./pages/Products";
+import Contact from "./pages/Contact";
+import Cart from "./pages/Cart";
+import SingleProduct from "./pages/SingleProduct";
+import ErrorPage from "./pages/ErrorPage";
 import { GlobalStyle } from "./GlobalStyle";
 import { ThemeProvider } from "styled-components";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./layout/Header";
+import Footer from "./layout/Footer";
 
 const App = () => {
   const theme = {

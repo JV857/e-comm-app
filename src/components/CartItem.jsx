@@ -1,4 +1,4 @@
-import FormatPrice from "../Helpers/FormatPrice";
+import FormatPrice from "../utils/FormatPrice";
 import CartAmountToggle from "./CartAmountToggle";
 import { FaTrash } from "react-icons/fa";
 import { useCartContext } from "../context/cart_context";

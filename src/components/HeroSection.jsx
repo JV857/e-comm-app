@@ -1,8 +1,10 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../styles/Button";
+import {useNavigate} from "react-router-dom"
 
 const HeroSection = ({ myData }) => {
+  const navigate = useNavigate();
   const { name } = myData;
 
   return (
@@ -10,7 +12,7 @@ const HeroSection = ({ myData }) => {
       <div className="container">
         <div className="grid grid-two-column">
           <div className="hero-section-data">
-            <p className="intro-data">Welcome to </p>
+            <h2 >Welcome to </h2>
             <h1> {name} </h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
@@ -18,11 +20,13 @@ const HeroSection = ({ myData }) => {
               animi! Suscipit sapiente.
             </p>
             <NavLink>
-              <Button>show now</Button>
+              <button onClick={() => {navigate("/");
+            
+            console.log("called");}}>show now</button>
             </NavLink>
           </div>
           {/* our homepage image  */}
-          <div className="hero-section-image">
+          {/* <div className="hero-section-image">
             <figure>
               <img
                 src="images/hero.jpg"
@@ -30,7 +34,7 @@ const HeroSection = ({ myData }) => {
                 className="img-style"
               />
             </figure>
-          </div>
+          </div> */}
         </div>
       </div>
     </Wrapper>
