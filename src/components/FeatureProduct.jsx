@@ -8,7 +8,6 @@ const FeatureProduct = () => {
     return <div> ......Loading </div>;
   }
 
-  // console.log("featureProducts",featureProducts);
   return (
     <div className="section">
       <div className="container">

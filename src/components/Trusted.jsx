@@ -97,7 +97,7 @@ const Trusted = () => {
         >
           {items &&
             items.map((item) => {
-              console.log("item", item);
+              // console.log("item", item);
               return (
                 <div className="" key={item.id}>
                   <img src={item?.image} alt="trusted-brands" />
