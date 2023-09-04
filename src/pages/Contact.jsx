@@ -80,7 +80,9 @@ const Contact = () => {
               onChange={(e) => setContactMsg(e.target.value)}
             />
 
-            <input type="submit" value="send" />
+            <div className="submit_btn_container">
+            <input type="submit" value="send" className="submit_btn"/>
+            </div>
           </form>
         </div>
       </div>
