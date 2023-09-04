@@ -7,6 +7,7 @@ import { AppProvider } from "./context/productcontex";
 import { FilterContextProvider } from "./context/filter_context";
 import { CartProvider } from "./context/cart_context";
 import { Auth0Provider } from "@auth0/auth0-react";
+import './assets/styles/theme.scss'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

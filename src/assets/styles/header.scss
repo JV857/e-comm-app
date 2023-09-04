@@ -1,0 +1,72 @@
+.header_container {
+  background-color: $color-theme;
+  height: 100px;
+  @include flex_centered;
+
+  .MuiContainer-root {
+    padding-top: 10px;
+
+    .MuiToolbar-root {
+      .app_icon_container {
+        margin: 0;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 1.6;
+        letter-spacing: 0.0075em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-right: 16px;
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        font-family: monospace;
+        font-weight: 700;
+        letter-spacing: 0.3rem;
+        -webkit-text-decoration: none;
+        text-decoration: none;
+
+        .app_icon {
+          width: 56px;
+        }
+      }
+
+      .add_icon_image {
+        padding-right: 30px;
+        cursor: pointer;
+        width: 40px;
+
+        @include Breakpoints(xs) {
+          padding-right: 15px;
+          width: 30px;
+        }
+      }
+
+      .MuiBox-root {
+        .MuiButtonBase-root {
+          .user_avatar {
+            height: 68px;
+            width: 68px;
+            padding-bottom: 15px;
+
+            @include Breakpoints(xs) {
+              height: 58px;
+              width: 58px;
+            }
+          }
+
+          .user_name {
+            color: $color-white;
+            font-size: 18px;
+
+            @include Breakpoints(xs) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

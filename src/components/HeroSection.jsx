@@ -1,110 +1,34 @@
 import { NavLink } from "react-router-dom";
-import styled from "styled-components";
-import { Button } from "../styles/Button";
-import {useNavigate} from "react-router-dom"
+import IntroImage from "../assets/images/5865.jpg";
 
 const HeroSection = ({ myData }) => {
-  const navigate = useNavigate();
   const { name } = myData;
 
   return (
-    <Wrapper>
+    <div className="home_intro_section">
       <div className="container">
-        <div className="grid grid-two-column">
+        <div className="grid grid-two-column grid_container">
           <div className="hero-section-data">
-            <h2 >Welcome to </h2>
+            <h2>Welcome to </h2>
             <h1> {name} </h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-              atque temporibus veniam doloribus libero ad error omnis voluptates
-              animi! Suscipit sapiente.
+              Welcome to Tech Store — your tech gadget paradise! In today's
+              fast-paced world, tech is essential. We've handpicked the latest
+              gadgets to elevate your life, from smartphones to smart home tech.
+              Quality and affordability are our priorities. Join us on the
+              journey to a smarter life. Shop now at Tech Store.
             </p>
-            <NavLink>
-              <button onClick={() => {navigate("/");
-            
-            console.log("called");}}>show now</button>
+            <NavLink to="/products" className="">
+              <button className="shop_now_container">Explore Products</button>
             </NavLink>
           </div>
-          {/* our homepage image  */}
-          {/* <div className="hero-section-image">
-            <figure>
-              <img
-                src="images/hero.jpg"
-                alt="hero-section-family"
-                className="img-style"
-              />
-            </figure>
-          </div> */}
+          <div className="hero-section-image">
+            <img src={IntroImage} alt="intro_img" className="img-style" />
+          </div>
         </div>
       </div>
-    </Wrapper>
+    </div>
   );
 };
-
-const Wrapper = styled.section`
-  padding: 12rem 0;
-
-  img {
-    min-width: 10rem;
-    height: 10rem;
-  }
-
-  .hero-section-data {
-    p {
-      margin: 2rem 0;
-    }
-
-    h1 {
-      text-transform: capitalize;
-      font-weight: bold;
-    }
-
-    .intro-data {
-      margin-bottom: 0;
-    }
-  }
-
-  .hero-section-image {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  figure {
-    position: relative;
-
-    &::after {
-      content: "";
-      width: 60%;
-      height: 80%;
-      background-color: rgba(81, 56, 238, 0.4);
-      position: absolute;
-      left: 50%;
-      top: -5rem;
-      z-index: -1;
-    }
-  }
-  .img-style {
-    width: 100%;
-    height: auto;
-  }
-
-  @media (max-width: ${({ theme }) => theme.media.mobile}) {
-    .grid {
-      gap: 10rem;
-    }
-
-    figure::after {
-      content: "";
-      width: 50%;
-      height: 100%;
-      left: 0;
-      top: 10%;
-      /* bottom: 10%; */
-      background-color: rgba(81, 56, 238, 0.4);
-    }
-  }
-`;
 
 export default HeroSection;
