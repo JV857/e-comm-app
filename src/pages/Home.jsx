@@ -1,5 +1,5 @@
 import FeatureProduct from "../components/FeatureProduct";
-import HeroSection from "../components/HeroSection";
+import IntroSection from "../components/IntroSection";
 import Services from "../components/Services";
 import Trusted from "../components/Trusted";
 
@@ -10,7 +10,7 @@ const Home = () => {
 
   return (
     <>
-      <HeroSection myData={data} />
+      <IntroSection myData={data} />
       <FeatureProduct />
       <Services />
       <Trusted />

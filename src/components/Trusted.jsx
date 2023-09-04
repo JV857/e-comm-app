@@ -1,85 +1,113 @@
-import styled from "styled-components";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const Trusted = () => {
+  const responsiveConfig = {
+    desktop: {
+      breakpoint: {
+        max: 3000,
+        min: 1024,
+      },
+      items: 4,
+      // partialVisibilityGutter: 40,
+    },
+    mobile: {
+      breakpoint: {
+        max: 464,
+        min: 0,
+      },
+      items: 1,
+      partialVisibilityGutter: 30,
+    },
+    tablet: {
+      breakpoint: {
+        max: 1024,
+        min: 464,
+      },
+      items: 2,
+      partialVisibilityGutter: 30,
+    },
+  };
+  const items = [
+    {
+      id: 1,
+      image:
+        "https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image2.png",
+      imageAlt: "partner1",
+    },
+    {
+      id: 2,
+      image:
+        "https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image3.png",
+      imageAlt: "partner2",
+    },
+    {
+      id: 3,
+      image:
+        "https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image4.png",
+      imageAlt: "partner3",
+    },
+    {
+      id: 4,
+      image:
+        "https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image6.png",
+      imageAlt: "partner4",
+    },
+    {
+      id: 5,
+      image:
+        "https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image8.png",
+      imageAlt: "partner5",
+    },
+  ];
+
   return (
-    <Wrapper className="brand-section">
+    <div className="brand-section">
       <div className="container">
-        <h3>Trusted By 1000+ Companies</h3>
-        <div className="brand-section-slider">
-          {/* my 1st img  */}
-          <div className="slide">
-            <img
-              src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image2.png"
-              alt="trusted-brands"
-            />
-          </div>
-          <div className="slide">
-            <img
-              src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image3.png"
-              alt="trusted-brands"
-            />
-          </div>
-          <div className="slide">
-            <img
-              src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image4.png"
-              alt="trusted-brands"
-            />
-          </div>
-          <div className="slide">
-            <img
-              src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image6.png"
-              alt="trusted-brands"
-            />
-          </div>
-          <div className="slide">
-            <img
-              src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image8.png"
-              alt="trusted-brands"
-            />
-          </div>
-        </div>
+        <h3>Our Partners</h3>
+        <Carousel
+          additionalTransfrom={0}
+          arrows={true}
+          autoPlay={true}
+          autoPlaySpeed={3000}
+          centerMode={false}
+          className=""
+          containerClass="container-padding-bottom"
+          dotListClass=""
+          // customButtonGroup={buttonGroup}
+          draggable
+          focusOnSelect={false}
+          infinite={true}
+          itemClass=""
+          keyBoardControl
+          minimumTouchDrag={80}
+          pauseOnHover
+          renderArrowsWhenDisabled={false}
+          renderButtonGroupOutside
+          renderDotsOutside={false}
+          responsive={responsiveConfig}
+          rewind={false}
+          rewindWithAnimation={false}
+          rtl={false}
+          shouldResetAutoplay
+          showDots={false}
+          sliderClass=""
+          slidesToSlide={1}
+          swipeable
+        >
+          {items &&
+            items.map((item) => {
+              console.log("item", item);
+              return (
+                <div className="" key={item.id}>
+                  <img src={item?.image} alt="trusted-brands" />
+                </div>
+              );
+            })}
+        </Carousel>
       </div>
-    </Wrapper>
+    </div>
   );
 };
-
-const Wrapper = styled.section`
-  padding: 9rem 0;
-  background-color: ${({ theme }) => theme.colors.bg};
-
-  .brand-section {
-    padding: 12rem 0 0 0;
-  }
-  h3 {
-    text-align: center;
-    text-transform: capitalize;
-    color: ${({ theme }) => theme.colors.text};
-    font-size: 2rem;
-    font-weight: bold;
-  }
-
-  img {
-    min-width: 10rem;
-    height: 10rem;
-  }
-
-  .brand-section-slider {
-    margin-top: 3.2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-  }
-
-  @media (max-width: ${({ theme }) => theme.media.mobile}) {
-    .brand-section-slider {
-      margin-top: 3.2rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      /* background-color: red; */
-      text-align: center;
-    }
-  }
-`;
 
 export default Trusted;

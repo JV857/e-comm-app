@@ -1,0 +1,77 @@
+.services_wrapper {
+
+    padding: 9rem 0;
+
+    .container {
+
+        .grid {
+            gap: 4.8rem;
+
+            // .services-1{
+            //     background-image: url("../images/delivery.jpg");
+            //     object-fit: contain;
+            //     background-size: contain;
+            //     background-repeat: no-repeat;
+            //     border-radius: 10px;
+            //     border: 2px solid grey;
+
+            // }
+
+            .services-1,
+            .services-2,
+            .services-3 {
+                width: auto;
+                height: 30rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                background: #F6F8FA;
+                text-align: center;
+                border-radius: 2rem;
+                box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+                //   border: 1px solid grey;
+            }
+
+
+            .services-2 {
+                gap: 4rem;
+                background-color: transparent;
+                box-shadow: none;
+
+                .services-colum-2 {
+                    background: #F6F8FA;
+                    display: flex;
+                    flex-direction: row;
+                    flex: 1;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 2rem;
+                    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+
+                    div {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 1rem;
+                    }
+                }
+            }
+
+            h3 {
+                margin-top: 1.4rem;
+                font-size: 2rem;
+            }
+
+            .icon {
+                width: 8rem;
+                height: 8rem;
+                padding: 2rem;
+                border-radius: 50%;
+                background-color: black;
+                color: white;
+            }
+        }
+    }
+}

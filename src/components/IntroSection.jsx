@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import IntroImage from "../assets/images/5865.jpg";
+import IntroImage from "../assets/images/Into_section_image.jpg";
 
-const HeroSection = ({ myData }) => {
+const IntroSection = ({ myData }) => {
   const { name } = myData;
 
   return (
@@ -31,4 +31,4 @@ const HeroSection = ({ myData }) => {
   );
 };
 
-export default HeroSection;
+export default IntroSection;

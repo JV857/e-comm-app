@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { FiShoppingCart } from "react-icons/fi";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import { CgMenu, CgClose } from "react-icons/cg";
 import { useCartContext } from "../context/cart_context";
 import { useAuth0 } from "@auth0/auth0-react";
@@ -61,11 +61,11 @@ const Nav = () => {
       }
 
       .cart-total--item {
-        width: 2.4rem;
-        height: 2.4rem;
+        width: 2rem;
+        height: 2rem;
         position: absolute;
         background-color: #000;
-        color: #000;
+        color: white;
         border-radius: 50%;
         display: grid;
         place-items: center;
@@ -220,7 +220,7 @@ const Nav = () => {
 
           <li>
             <NavLink to="/cart" className="navbar-link cart-trolley--link">
-              <FiShoppingCart className="cart-trolley" />
+              <AiOutlineShoppingCart className="cart-trolley" />
               <span className="cart-total--item"> {total_item} </span>
             </NavLink>
           </li>

@@ -27,8 +27,8 @@ const Footer = () => {
         <footer>
           <div className="container grid grid-four-column">
             <div className="footer-about">
-              <h3>Tech Hub</h3>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+              {/* <h3>Tech Store</h3> */}
+              <p>Explore the world of top-notch tech gadgets at Tech Store, where innovation meets affordability for a smarter, more stylish life. Start shopping today! </p>
             </div>
             <div className="footer-subscribe">
               <h3>Subscribe to get important updates</h3>
@@ -58,8 +58,8 @@ const Footer = () => {
               </div>
             </div>
             <div className="footer-contact">
-              <h3>Call Us</h3>
-              <h3>+91 8750585277</h3>
+              <h3>Contact Us</h3>
+              <h3>+91 1234567890</h3>
             </div>
           </div>
 
@@ -67,9 +67,9 @@ const Footer = () => {
             <hr />
             <div className="container grid grid-two-column ">
               <p>
-                @{new Date().getFullYear()} Tech Store. All Rights Reserved
+                @ {" "}{new Date().getFullYear()} Tech Store. All Rights Reserved
               </p>
-              <div>
+              <div style={{display:"flex", justifyContent:"space-between"}}>
                 <p>PRIVACY POLICY</p>
                 <p>TERMS & CONDITIONS</p>
               </div>

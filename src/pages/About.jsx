@@ -1,4 +1,4 @@
-import HeroSection from "../components/HeroSection";
+import IntroSection from "../components/IntroSection";
 import { useProductContext } from "../context/productcontex";
 
 const About = () => {
@@ -11,7 +11,7 @@ const About = () => {
   return (
     <>
       {myName}
-      <HeroSection myData={data} />
+      <IntroSection myData={data} />
     </>
   );
 };
